@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="vue">
+<shu v-for="item in item" v-bind:item="item"></shu>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+<script type="text/javascript">
+<!--    注册组件-->
+    Vue.component('shu',{
+        props:['item'],
+        template:'<li>{{item}}</li>'
+    })
+
+    var vm = new Vue({
+        el: '#vue',
+        data: {
+            item:[
+'123','567','2323'
+            ]
+        }
+    });
+</script>
+</body>
+</html>

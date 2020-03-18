@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="vue" >
+<p>{{cuttenttime1()}}</p>
+    <p>{{currenttime2}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#vue',
+        data:{
+            message:'hello vue'
+        },
+        methods:{
+            cuttenttime1:function () {
+return Date.now();
+            }
+        },
+        computed:{
+            currenttime2:function () {
+ this.message;
+ return Date.now();
+            }
+        }
+
+    });
+</script>
+</body>
+</html>

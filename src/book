@@ -1,0 +1,5 @@
+v-bind:绑定事件,悬停事件
+el:绑定id
+item[]:存放数组
+v-for=“intm in item”:遍历方法
+
